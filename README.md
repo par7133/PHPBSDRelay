@@ -13,7 +13,7 @@ To install the PHPBSDRelay proceed with the following steps:
     adding it in /etc/php-fpm.d/ or any cons repo in your system   
   
 Attention:  
-&gt;&gt Remember to change the logic by which you generate the variable $SALT in index.php &lt;&lt
+&gt;&gt; Remember to change the logic by which you generate the variable $SALT in index.php &lt;&lt;
 
 Consume it (from PHP) like that:
 
