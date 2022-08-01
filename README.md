@@ -3,7 +3,7 @@
 
 ### Welcome to PHPBSDRelay
 
-PHPSBDRelay is a simple PHP wrapper for OpenBSD smtpd service to use it as smtp relay for your web app
+PHPSBDRelay is a simple PHP wrapper for OpenBSD smtpd service to use it as smtp relay for your web apps
 
 To install the PHPBSDRelay proceed with the following steps:
 
