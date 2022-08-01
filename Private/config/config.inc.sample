@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * Copyright 2021, 2024 5 Mode
+ *
+ * This file is part of PHPBSDRelay.
+ *
+ * PHPBSDRelay is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * PHPBSDRelay is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with PHPBSDRelay. If not, see <https://www.gnu.org/licenses/>.
+ *   
+ * config.inc
+ * 
+ * PHPBSDRelay configuration settings.
+ *
+ * @author Daniele Bonini <my25mb@aol.com>
+ * @copyrights (c) 2021, 2024, 5 Mode     
+ */
+
+define('DEBUG', true);
+ 
+define('APP_NAME', "PHPBSDRelay");
+
+// sha256 password
+// pw: yourpassword
+// hash: 
+define('APP_PASSWORD', "yourpassword");
+
+define('APP_PATH', "/var/www/PHPBSDRelay/Public");
+define('APP_SCRIPT_PATH', "/var/www/PHPBSDRelay/Private/scripts");
+define('APP_AJAX_PATH', "/var/www/PHPBSDRelay/Private/scripts_ajax");
+define('APP_ERROR_PATH', "/var/www/PHPBSDRelay/Private/error");
+
+// Default Locale, in two letters format
+define('APP_LOCALE', "EN");
+
+$CONFIG = [
+
+   'DEBUG' => true,
+
+   'APP' => [
+      'NAME' => "PHPBSDRelay",
+      // sha256 password
+      // pw: yourpassword
+      // hash: 
+      'PASSWORD' => "yourpassword", 
+      'PATH' => "/var/www/PHPBSDRelay/Public",
+      'SCRIPT_PATH' => "/var/www/PHPBSDRelay/Private/scripts",
+      'AJAX_PATH' => "/var/www/PHPBSDRelay/Private/scripts_ajax",
+      'ERROR_PATH' => "/var/www/PHPBSDRelay/Private/error",
+      'LOCALE' => "EN"
+      ],
+
+    ];  
+
