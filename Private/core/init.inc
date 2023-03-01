@@ -13,8 +13,8 @@
  * PHPBSDRelay is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
+ * GNU General Public License for more details.  
+ * 
  * You should have received a copy of the GNU General Public License
  * along with PHPBSDRelay. If not, see <https://www.gnu.org/licenses/>.
  *
@@ -28,10 +28,6 @@
 
 //use fivemode\fivemode\Class;
 
-$ctrlName = strtolower(rtrim(substr(filter_input(INPUT_GET, "url", FILTER_SANITIZE_STRING), 0, 300), "/"));
-if ($ctrlName === "") {
-  $ctrlName = "home";
-}
 
 error_reporting(E_ALL & ~ (E_WARNING | E_NOTICE | E_STRICT | E_DEPRECATED));  
 ini_set('display_startup_errors',1);  
