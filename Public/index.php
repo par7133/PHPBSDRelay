@@ -14,8 +14,8 @@
  * PHPBSDRelay is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
+ * GNU General Public License for more details.  
+ * 
  * You should have received a copy of the GNU General Public License
  * along with PHPBSDRelay. If not, see <https://www.gnu.org/licenses/>.
  *
@@ -39,7 +39,9 @@ $scriptPath = APP_SCRIPT_PATH;
 
 // PARAMETERS VALIDATION
 
-$url = strtolower(trim(substr(filter_input(INPUT_GET, "url", FILTER_SANITIZE_STRING), 0, 300), "/"));
+$url = filter_input(INPUT_GET, "url")??"";
+$url = strip_tags($url);
+$url = strtolower(trim(substr($url, 0, 300), "/"));
 
 switch ($url) {
   case "action":
@@ -53,7 +55,9 @@ switch ($url) {
     break;
   case "":
 
-    $bsdha = strtolower(substr(filter_input(INPUT_GET, "bsdha", FILTER_SANITIZE_STRING), 0, 64));
+    $bsdha = filter_input(INPUT_GET, "bsdha")??"";
+    $bsdha = strip_tags($bsdha);
+    $bsdha = strtolower(substr($bsdha, 0, 64));
     
     // SALT LOGIC
     $SALT = "";
@@ -66,9 +70,17 @@ switch ($url) {
       $auth = false;
     }
     
-    $bsdto = trim(substr(filter_input(INPUT_GET, "bsdto", FILTER_SANITIZE_STRING), 0, 100), " ");
-    $bsdsu = trim(substr(filter_input(INPUT_GET, "bsdsu", FILTER_SANITIZE_STRING), 0, 300), " ");
-    $bsdbo = trim(substr(filter_input(INPUT_GET, "bsdbo", FILTER_SANITIZE_STRING), 0, 5000), " ");
+    $bsdto = filter_input(INPUT_GET, "bsdto")??"";
+    $bsdto = strip_tags($bsdto);
+    $bsdto = trim(substr($bsdto, 0, 100), " ");
+    
+    $bsdsu = filter_input(INPUT_GET, "bsdsu")??"";
+    $bsdsu = strip_tags($bsdsu);
+    $bsdsu = trim(substr($bsdsu, 0, 300), " ");
+    
+    $bsdbo = filter_input(INPUT_GET, "bsdbo")??"";
+    $bsdbo = strip_tags($bsdbo);
+    $bsdbo = trim(substr($bsdbo, 0, 5000), " ");
     
     if (!$auth || ($bsdto===PHP_STR) || ($bsdsu===PHP_STR) || ($bsdbo===PHP_STR)) {
       echo("Param error.");
