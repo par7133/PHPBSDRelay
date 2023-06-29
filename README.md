@@ -17,4 +17,4 @@ Attention:
 
 Consume it (from PHP) like that:
 
-yourhostname.com/?bsdha=<your_hash>&bsdto=info@5mode.com&bsdsu=hello&bsdbo=Hello%20from%20Github!
+yourhostname.com/?bsdha=<your_hash>&bsdto=posta@elettronica.lol&bsdsu=hello&bsdbo=Hello%20from%20Github!
