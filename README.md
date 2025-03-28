@@ -18,3 +18,5 @@ Attention:
 Consume it (from PHP) like that:
 
 yourhostname.com/?bsdha=<your_hash>&bsdto=posta@elettronica.lol&bsdsu=hello&bsdbo=Hello%20from%20Github!
+
+Feedback: <a href="mailto:code@gaox.io">code@gaox.io</a>
